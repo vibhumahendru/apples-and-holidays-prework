@@ -81,8 +81,12 @@ def all_holidays_with_bbq(holiday_hash)
 newAr = []
 holiday_hash.each do |key1, value1|
   value1.each do |key2, value2|
-    if value2.include?
-  
+    if value2.include?("BBQ")
+  newAr.push(value2)
+end
+end
+end
+newAr
 end
 
 
