@@ -65,11 +65,10 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   holiday_hash.each do |key1, value1|
-    puts key1
+    puts "#{key1.capitalize}:"
     value1.each do |key2, value2|
-      puts key2 + ": " + value2.to_s
+      puts "  #{key2.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{value2.join(", ")}"
   end
-end
 end
 
 end
@@ -77,7 +76,17 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-
+#newAr = [:fourth_of_july, :memorial_day]
+#newAr
+newAr = []
+holiday_hash.each do |key1, value1|
+  value1.each do |key2, value2|
+    if value2.include?("BBQ")
+  newAr.push(key2)
+end
+end
+end
+newAr
 end
 
 
