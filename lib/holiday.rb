@@ -79,6 +79,10 @@ def all_holidays_with_bbq(holiday_hash)
 #newAr = [:fourth_of_july, :memorial_day]
 #newAr
 newAr = []
+holiday_hash.each do |key1, value1|
+  value1.each do |key2, value2|
+    if value2.include?
+  
 end
 
 
