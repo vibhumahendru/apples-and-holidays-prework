@@ -82,7 +82,7 @@ newAr = []
 holiday_hash.each do |key1, value1|
   value1.each do |key2, value2|
     if value2.include?("BBQ")
-  newAr.push(value2)
+  newAr.push(key2)
 end
 end
 end
